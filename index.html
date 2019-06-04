@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+          integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+          crossorigin="anonymous">
+    <link rel="stylesheet" href="./public/styles/bootstrap.min.css" />
+    <link rel="stylesheet" href="./public/styles/styles.css" />
+    <link rel="stylesheet" href="./public/styles/notifications.css" />
+
+    <title>CookUni</title>
+
+    <meta name="author" content="Konstantin Lazarov">
+    <meta name="keywords" content="Konstantin, Lazarov, cookuni, cook, uni, recipe">
+</head>
+
+<body>
+
+    <div id="rooter" class="cover-container w-100 d-flex h-100 p-3 mx-auto flex-column"></div>
+
+    <div class="modal fade" id="loaderWrapper" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div id="loader" class="spinner-border text-danger text-info loader" role="status"></div>
+        </div>
+    </div>
+
+    <div id="info" class="bg-success"></div>
+    <div id="error" class="bg-danger"></div>
+
+    <script src="./public/js/jquery.min.js"></script>
+    <script src="./public/js/bootstrap.min.js"></script>
+    <script src="./main.js"></script>
+
+</body>
+</html>

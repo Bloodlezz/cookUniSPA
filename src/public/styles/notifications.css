@@ -1,0 +1,89 @@
+/* NOTIFICATIONS CSS */
+/* The errors/info - position it at the top and in the middle of the screen */
+#error, #info {
+    visibility: hidden; /* Hidden by default. Visible on click */
+    color: #fff; /* White text color */
+    text-align: center; /* Centered text */
+    border-radius: 2px; /* Rounded borders */
+    padding: 5px; /* Padding */
+    position: fixed; /* Sit on top of the screen */
+    z-index: 1; /* Add a z-index if needed */
+    left: 50%; /* Center the errors/info */
+    top: 30px; /* 30px from the bottom */
+}
+
+#error {
+    width: 300px; /* Set a default minimum width */
+    margin-left: -150px; /* Divide value of min-width by 2 */
+}
+
+#info {
+    min-width: 250px; /* Set a default minimum width */
+    margin-left: -125px; /* Divide value of min-width by 2 */
+}
+
+/* Show the snackbar when clicking on a button (class added with JavaScript) */
+#error.show, #info.show {
+    visibility: visible; /* Show the errors/info */
+    /* Add animation: Take 0.5 seconds to fade in and out the errors/info.
+    However, delay the fade out process for 3 seconds */
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 3s;
+    animation: fadein 0.5s, fadeout 0.5s 3s;
+}
+
+/* Animations to fade the errors/info in and out */
+@-webkit-keyframes fadein {
+    from {
+        top: 0;
+        opacity: 0;
+    }
+    to {
+        top: 30px;
+        opacity: 1;
+    }
+}
+
+@keyframes fadein {
+    from {
+        top: 0;
+        opacity: 0;
+    }
+    to {
+        top: 30px;
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes fadeout {
+    from {
+        top: 30px;
+        opacity: 1;
+    }
+    to {
+        top: 0;
+        opacity: 0;
+    }
+}
+
+@keyframes fadeout {
+    from {
+        top: 30px;
+        opacity: 1;
+    }
+    to {
+        top: 0;
+        opacity: 0;
+    }
+}
+
+/* LOADER CSS */
+.loader {
+    position: absolute;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 3rem;
+    height: 3rem;
+}
