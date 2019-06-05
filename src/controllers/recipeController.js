@@ -129,7 +129,7 @@ module.exports = (() => {
         recipeModel.removeRecipe(recipeId)
             .then(() => {
                 notificator.hideLoading();
-                this.redirect('#/');
+                this.redirect('#/home');
                 notificator.showInfo('Your recipe was deleted.');
             })
             .catch(function (error) {
